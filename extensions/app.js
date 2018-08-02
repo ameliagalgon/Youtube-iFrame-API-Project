@@ -49,7 +49,6 @@ function changeTitle() {
   titleElement.innerHTML = videoTitle;
 }
 
-
 //play function
 function play(){
   player.playVideo();
@@ -62,6 +61,17 @@ function pause(){
 //stop function
 function stop(){
   player.stopVideo();
+}
+
+//mute function
+function mute(){
+  if( !player.isMuted() ){
+    player.mute();
+    document.getElementById('mute').innerHTML = '<ion-icon name="volume-off"></ion-icon>'
+  } else {
+    player.unMute();
+    document.getElementById('mute').innerHTML = '<ion-icon name="volume-high"></ion-icon>'
+  }
 }
 
 
@@ -91,4 +101,17 @@ function loadVideo2() {
   ***/
   // var videoTitle = document.getElementById("video1").innerHTML
   // document.getElementById("video-title").innerHTML = videoTitle;
+}
+
+/** Video player sizes **/
+function setSmall() {
+  player.setSize(260, 147); //numbers can vary
+}
+
+function setLarge() {
+  player.setSize(640, 390);
+}
+
+function setExtraLarge(){
+  player.setSize(1000, 563); //number can vary
 }

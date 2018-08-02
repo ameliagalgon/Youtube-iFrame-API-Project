@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample Youtube API Project</title>
+    <!-- script for the ionicons framework to use svg icons -->
+    <script src="https://unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
+    
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <h1 id="video-title"></h1>
+    <div id="player"></div>
+    <button onclick="play()"><ion-icon name="play"></ion-icon></button>
+    <button onclick="pause()"><ion-icon name="pause"></ion-icon></button>
+    <button onclick="stop()"><ion-icon name="square"></ion-icon></button>
+    <button id="mute" onclick="mute()"><ion-icon name="volume-high"></ion-icon></button>
+
+    <h4>Videos</h4>
+    <button id="video1" onclick="loadVideo1()">YouTube Developers Live: Embedded Web Player Customization</button>
+    <button id="video2" onclick="loadVideo2()">Google I/O 2011: YouTube's iframe Player: The Future of Embedding</button>
+
+    <h4>Player sizes</h4>
+    <button onclick="setSmall()">Small</button>
+    <button onclick="setLarge()">Large</button>
+    <button onclick="setExtraLarge()">Extra Large</button>
+    <footer>
+      <!-- credit Youtube iFrame API -->
+    </footer>
+  </body>
+</html>
